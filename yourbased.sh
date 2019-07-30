@@ -5,8 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get install -y libmpc-dev libmpfr-dev libgmp-dev libatlas-base-dev liblapack-dev gfortran graphviz texlive-xetex texlive-fonts-recommended fonts-freefont-otf latexmk lmodern
 pip uninstall -y pytest
 pip install --pre -U gmpy2
-travis_wait pip install .[exports,plot,interactive,develop,gmpy,docs]
-|
+pip install .[exports,plot,interactive,develop,gmpy,docs]
 PYTEST_ADDOPTS="${PYTEST_ADDOPTS} --split=${SPLIT}"
 if [ -n "${COVERAGE}" ]; then
    PYTEST_ADDOPTS="${PYTEST_ADDOPTS} ${COVOPTS}"
