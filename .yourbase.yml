@@ -9,8 +9,8 @@ build_targets:
         - chmod +x yourbased.sh
         - ./yourbased.sh
     environment:
-      - PYTEST_ADDOPTS="-n auto --cov-config setup.cfg --cov-append --cov-report="
-      - COVOPTS="--cov diofant -m \"not slow and not xfail\""
+      - PYTEST_ADDOPTS=-n auto --cov-config setup.cfg --cov-append
+      - COVOPTS=--cov diofant
       - PYTHONHASHSEED=0
      
 ci:
